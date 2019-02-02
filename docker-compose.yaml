@@ -19,10 +19,10 @@ services:
       - "8428:8428"
     volumes:
       - /var/lib/victoria-metrics:/var/lib/victoria-metrics
-    environment:
-      - "storageDataPath=/var/lib/victoria-metrics"
-      - "memory.allowedPercent=40"
-      - "loggerLevel=INFO"
+    command:
+      - "-storageDataPath=/var/lib/victoria-metrics"
+      - "-memory.allowedPercent=40"
+      - "-loggerLevel=INFO"
     networks:
       - monitoring
 
