@@ -1,0 +1,13 @@
+version: '3'
+services:
+  grafana:
+    image: grafana/grafana:5.4.3
+    container_name: grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana/config/grafana.ini:/etc/grafana/grafana.ini:ro
+      # sudo mkdir -p /var/lib/grafana; chown 472:472 /var/lib/grafana
+      - /var/lib/grafana:/var/lib/grafana
+    networks:
+      - monitoring
