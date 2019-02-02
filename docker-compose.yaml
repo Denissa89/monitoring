@@ -13,7 +13,7 @@ services:
       - monitoring
 
   victoria-metrics:
-    image: victoria-metrics:tags-v1.7.2-single-image-0-gfdfc6ef9
+    image: valyala/victoria-metrics:tags-v1.7.2-single-image-0-gfdfc6ef9
     container_name: victoria-metrics
     ports:
       - "8428:8428"
